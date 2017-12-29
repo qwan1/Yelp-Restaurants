@@ -1,0 +1,87 @@
+body {
+  background-color: #000;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 2px 2px 10px black;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(http://img.themirahotel.com/wp-content/uploads/2015/04/Cuisine_Cuisine_The_Mira_Oriental_Brunch_2015.jpg)
+}
+.slideshow li:nth-child(2) {
+  background-image: url(https://www.cntravellerme.com/sites/default/files/styles/1920px_900px_wide_landscape/public/images/2016/08/24/Librije_s_Zusje_Waldorf_Astoria_Amsterdam_Librije_Zusje_HR.jpg?itok=cmatcje7&c=3bcd74067cf2ca4792c226230ac86701);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(http://gbc.blob.core.windows.net/media/img15771.jpg);
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(https://prods3.imgix.net/images/articles/2017_10/nonfeatured-michelin-starred-hotel-restaurants.jpg?auto=format%2Ccompress&ixjsv=2.2.3);
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url(http://chicagomodmagazine.com/wp-content/uploads/2017/10/Smyth-GALDONES-PHOTOGRAPHY-23SEP2016-1.jpg);
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1
+    animation-timing-function: ease-out;
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
